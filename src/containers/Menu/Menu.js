@@ -41,8 +41,8 @@ class Menu extends Component {
                     // looping through the restaurantMenuItem Objects
                     Object.keys(resItems).forEach(function (ele) {
                         subItemId = JSON.stringify(resItems[ele].restaurantMenuItemId);
-                        subItemTitle = JSON.stringify(resItems[ele].title);
-                        subItemDescription = JSON.stringify(resItems[ele].description);
+                        subItemTitle = JSON.stringify(resItems[ele].title).replace(/"/g, "");
+                        subItemDescription = JSON.stringify(resItems[ele].description).replace(/"/g, "");
                         subItemPrice = JSON.stringify(resItems[ele].price);
                         
                         // creating JSON Objects for each menu item 
@@ -78,11 +78,12 @@ class Menu extends Component {
 
     render() {
         const menu = this.state.menu.map(menuItem => {
-
+            
             return <MenuItem
             key = {menuItem.itemId}
             category = {menuItem.itemCategory}
             title = {menuItem.itemTitle}
+            // description = {menuItem.itemDescription ? 'It was null' : '{props.description}'}
             description = {menuItem.itemDescription}
             price = {menuItem.itemPrice}
 
@@ -92,7 +93,8 @@ class Menu extends Component {
 
         return ( 
         <div>
-            <section className = "Posts" > 
+            {/* change className to switch render style */}
+            <section className = "Items" >
                 {menu} 
             </section> 
             <section >

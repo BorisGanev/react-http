@@ -2,11 +2,12 @@
     border: 1px solid #eee;
     box-sizing: border-box;
     box-shadow: 0 2px 3px #ccc;
+    color: rgb(63, 62, 62);
     cursor: pointer;
     margin: 10px;
     padding: 16px;
-    text-align: center;
-    width: 250px;
+    /* text-align: center; */
+    width: 30rem;
 }
 
 .MenuItem:hover,
@@ -14,7 +15,27 @@
     background-color: #C0DDF5;
 }
 
-.Author {
-    color: rgb(51, 51, 51);
-    margin: 16px 0;
+.Category {
+    color: rgb(34, 34, 34);
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: left;        
+    text-decoration: underline;
+}
+
+.Description {
+
+}
+
+.Price {
+    display: inline;    
+    font-weight: 600;
+    text-align: right;
+}
+
+.ItemTitle {
+    display: inline;
+    font-size: 1.2rem;
+    font-weight: 600;   
+    text-align: left; 
 }
