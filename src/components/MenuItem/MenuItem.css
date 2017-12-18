@@ -1,0 +1,20 @@
+.MenuItem {
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    box-shadow: 0 2px 3px #ccc;
+    cursor: pointer;
+    margin: 10px;
+    padding: 16px;
+    text-align: center;
+    width: 250px;
+}
+
+.MenuItem:hover,
+.MenuItem:active {
+    background-color: #C0DDF5;
+}
+
+.Author {
+    color: rgb(51, 51, 51);
+    margin: 16px 0;
+}
